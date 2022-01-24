@@ -134,3 +134,11 @@ if __name__ == "__main__":
         verbose=True,
     )
     display_forecast(pred_series, series, "1 horizon", start_date=trainset_size)
+
+    
+'''
+Useful links:
+https://unit8co.github.io/darts/examples/07-NBEATS-examples.html
+https://arxiv.org/pdf/2009.11961.pdf
+https://unit8co.github.io/darts/generated_api/darts.models.forecasting.nbeats.html
+'''
