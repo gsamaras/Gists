@@ -138,6 +138,7 @@ if __name__ == "__main__":
     
 '''
 Useful links:
+https://gsamaras.wordpress.com/code/n-beats-randomized-grid-search
 https://unit8co.github.io/darts/examples/07-NBEATS-examples.html
 https://arxiv.org/pdf/2009.11961.pdf
 https://unit8co.github.io/darts/generated_api/darts.models.forecasting.nbeats.html
