@@ -42,6 +42,11 @@ def define_NBEATS_model(
             "num_layers": [2, 3, 4],
             "layer_widths": [256, 512, 1024],
             "n_epochs": [20],
+            "random_state": [0],
+            "optimizer_cls": [optim.Adadelta, optim.Adagrad, optim.Adam, optim.AdamW, optim.Adamax, optim.ASGD, optim.NAdam, 
+                              optim.RAdam, optim.RMSprop, optim.Rprop, optim.SGD],
+            "optimizer_kwargs": [{'lr': 1e-3}],
+            "lr_scheduler_cls": [optim.lr_scheduler.ConstantLR, optim.lr_scheduler.LinearLR, optim.lr_scheduler.ReduceLROnPlateau],
             "nr_epochs_val_period": [1],
             "batch_size": [128, 256, 512, 1024],
             "model_name": ["nbeats_run"],
@@ -76,6 +81,10 @@ def define_NBEATS_model(
             n_epochs=100,
             nr_epochs_val_period=1,
             batch_size=800,
+            random_state=0,
+            optimizer_kwargs={'lr': 1e-3},
+            lr_scheduler_cls = lr_scheduler.ReduceLROnPlateau,
+            torch_device_str="cuda:0",
             model_name="nbeats_run",
         )
     return model_nbeats
@@ -142,4 +151,5 @@ https://gsamaras.wordpress.com/code/n-beats-randomized-grid-search
 https://unit8co.github.io/darts/examples/07-NBEATS-examples.html
 https://arxiv.org/pdf/2009.11961.pdf
 https://unit8co.github.io/darts/generated_api/darts.models.forecasting.nbeats.html
+https://pytorch.org/docs/stable/optim.html
 '''
