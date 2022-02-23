@@ -64,5 +64,5 @@ Epoch 10: 100%
 Useful links:
 https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#trainer-class-api
 https://pytorch-lightning.readthedocs.io/en/stable/advanced/tpu.html#tpu-core-training
-
+https://gsamaras.wordpress.com/code/n-beats-with-tpu-accelerator/
 '''
