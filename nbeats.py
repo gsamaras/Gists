@@ -84,7 +84,13 @@ def define_NBEATS_model(
             random_state=0,
             optimizer_kwargs={'lr': 1e-3},
             lr_scheduler_cls = lr_scheduler.ReduceLROnPlateau,
+            # Works until darts 0.16.1
             torch_device_str="cuda:0",
+            # For darts >= 0.17.1 https://github.com/unit8co/darts/issues/802
+            #pl_trainer_kwargs={
+            #    "accelerator": "gpu",
+            #    "gpus": [0]
+            #},
             model_name="nbeats_run",
         )
     return model_nbeats
